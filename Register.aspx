@@ -1,7 +1,63 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Register.aspx.cs" Inherits="Register" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+      
+    <script src="jquery/jquery-register.js"></script>
+    <script type="text/javascript">
+        <%=cor %>
+    </script>
+
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">    
+    <form onsubmit="return CheckForm()" method="post">
+
+         <table border="0" dir="rtl" style="float:right">
+        <tr>
+            <th>אימייל</th>
+            <td dir="ltr"><input type="text" name="Email" id="Email" /></td>
+            <td><b class="regError" id="e-mail"></b></td>
+        </tr>
+        <tr>       
+            <th>שם פרטי</th>
+            <td><input type="text" name="fname" id="fname" /></td>
+            <td><b class="regError" id="e-fname"></b></td>
+        </tr>
+
+        <tr>
+            <th>שם משפחה</th>
+            <td><input type="text" name="lname" id="lname" /></td>
+            <td><b class="regError" id="e-lname"></b></td>
+        </tr>
+
+        <tr>
+            <th>טלפון נייד</th>
+            <td dir="ltr">05<input type="text" name="phone" id="phone" /></td>
+            <td><b class="regError" id="e-phone"></b></td>
+        </tr>        
+        <tr>
+            <th>סיסמא</th>
+            <td><input type="password" name="pass" id="pass" /></td>
+            <td><b class="regError" id="e-pass"></b></td>
+        </tr>
+        <tr>
+            <th>מין</th>
+            <td>
+                <select name="gender" id="gender">
+                    <option selected="selected">זכר</option>
+                    <option>נקבה</option>
+                </select>
+            </td>
+        </tr>
+        <tr><td></td></tr>
+        <tr>
+            <td><input type="submit" name="submit" value="הרשמה" /></td>
+            <td><input type="reset" value="נקה" /></td>
+        </tr>
+    </table>
+
+    </form>
+
+
 </asp:Content>
 
