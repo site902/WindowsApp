@@ -13,12 +13,16 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
+
+    <ul>
+        <li><a href="Default.aspx">Home</a></li>
+        <li><%=reg %></li>
+    </ul>
+
     <div>
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
     </div>
-    </form>
 </body>
 </html>
